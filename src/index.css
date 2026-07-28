@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-primary: #735c00;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d4af37;
+  --color-on-primary-container: #554300;
+  --color-luxury-gold: #D4AF37;
+  --color-gold-gradient-start: #D4AF37;
+  --color-gold-gradient-end: #B8860B;
+  --color-onyx-black: #121212;
+  --color-sand-neutral: #F3F4F6;
+  
+  --color-surface: #fff8f0;
+  --color-surface-dim: #e1d9cc;
+  --color-surface-bright: #fff8f0;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fbf3e5;
+  --color-surface-container: #f5eddf;
+  --color-surface-container-high: #efe7da;
+  --color-surface-container-highest: #eae1d4;
+  --color-on-surface: #1f1b13;
+  --color-on-surface-variant: #4d4635;
+  --color-inverse-surface: #343027;
+  --color-inverse-on-surface: #f8f0e2;
+  --color-outline: #7f7663;
+  --color-outline-variant: #d0c5af;
+  --color-surface-variant: #eae1d4;
+
+  --color-secondary: #5f5e5e;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e2dfde;
+  --color-on-secondary-container: #636262;
+
+  /* Typography Fonts */
+  --font-amiri: "Amiri", serif;
+  --font-worksans: "Work Sans", sans-serif;
+}
+
+/* Custom styles for professional scroll effects and material glass layers */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.luxury-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Base resets to match Arabic typesetting beautifully */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-amiri), serif;
+}
+
+body, button, input, select, textarea, span, p, .font-body {
+  font-family: var(--font-worksans), sans-serif;
+}
+
+/* RTL specifics */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle Interactive Hover Pulse for Logo */
+@keyframes subtle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 2px 6px rgba(184,167,149,0.3));
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 4px 12px rgba(184,167,149,0.5));
+  }
+}
+
+.hover-logo-pulse {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hover-logo-pulse:hover {
+  animation: subtle-pulse 1.8s infinite ease-in-out;
+}

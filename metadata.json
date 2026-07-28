@@ -1,0 +1,6 @@
+{
+  "name": "Al-Ola Integration Finishing",
+  "description": "العلا للتشطيبات المتكاملة - تشطيبات سكنية وتجارية فاخرة بأعلى معايير الدقة والجودة والالتزام بالمواعيد.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
