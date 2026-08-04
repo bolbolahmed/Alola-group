@@ -5,6 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -207,6 +208,7 @@ export default function App() {
     <LanguageProvider>
       <MainApp />
       <SpeedInsights />
+      <Analytics />
     </LanguageProvider>
   );
 }
